@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="s_black">#454545</color>
+    <color name="s_border">#AFAFAF</color>
+    <color name="s_grey_light">#EDEFF4</color>
+
 </resources>
