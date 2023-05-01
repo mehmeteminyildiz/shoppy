@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.mhmtyldz.shoppy.R
 import com.mhmtyldz.shoppy.adapter.productDetail.ProductDetailImageSliderAdapter
 import com.mhmtyldz.shoppy.databinding.FragmentProductDetailBinding
@@ -179,6 +180,9 @@ class ProductDetailFragment : Fragment() {
 
     private fun handleClickEvents() {
         binding.apply {
+            cardBack.setOnClickListener {
+                findNavController().popBackStack()
+            }
             cardAddToCart.setOnClickListener {
                 Toast.makeText(requireContext(), "Added to cart", Toast.LENGTH_SHORT).show()
             }

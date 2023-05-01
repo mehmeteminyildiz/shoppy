@@ -40,10 +40,9 @@
                         app:cardElevation="0dp"
                         app:strokeWidth="0dp">
 
-                        <LinearLayout
+                        <FrameLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:layout_height="wrap_content">
 
 
                             <com.google.android.material.card.MaterialCardView
@@ -75,8 +74,26 @@
                                 </FrameLayout>
                             </com.google.android.material.card.MaterialCardView>
 
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cardBack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="12dp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardElevation="4dp"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Button.50"
+                                app:strokeWidth="0dp">
 
-                        </LinearLayout>
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    android:src="@drawable/baseline_arrow_back_ios_new_24"
+                                    app:tint="@color/s_black" />
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                        </FrameLayout>
 
                     </com.google.android.material.card.MaterialCardView>
 
@@ -90,14 +107,14 @@
 
                         <TextView
                             android:id="@+id/tvBrand"
-                            tools:visibility="visible"
-                            android:visibility="gone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato"
                             android:textColor="@color/s_secondary_text"
                             android:textSize="16sp"
-                            tools:text="Kardeşler Kundura" />
+                            android:visibility="gone"
+                            tools:text="Kardeşler Kundura"
+                            tools:visibility="visible" />
 
                     </LinearLayout>
 
@@ -113,12 +130,12 @@
                             android:id="@+id/tvName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            tools:visibility="visible"
-                            android:visibility="gone"
                             android:fontFamily="@font/lato_bold"
                             android:textColor="@color/s_black"
                             android:textSize="22sp"
-                            tools:text="Abidas Son Sezon Ayakkabı" />
+                            android:visibility="gone"
+                            tools:text="Abidas Son Sezon Ayakkabı"
+                            tools:visibility="visible" />
 
                     </LinearLayout>
 
@@ -130,24 +147,24 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardDiscount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:id="@+id/cardDiscount"
-                            tools:visibility="visible"
-                            android:visibility="gone"
                             android:layout_marginStart="24dp"
+                            android:visibility="gone"
                             app:cardBackgroundColor="@color/s_red"
                             app:cardCornerRadius="5dp"
-                            app:strokeWidth="0dp">
+                            app:strokeWidth="0dp"
+                            tools:visibility="visible">
 
                             <TextView
+                                android:id="@+id/tvDiscount"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/lato_bold"
                                 android:paddingHorizontal="16dp"
                                 android:paddingVertical="6dp"
-                                android:id="@+id/tvDiscount"
                                 android:textColor="@color/white"
                                 android:textSize="16sp"
                                 tools:text="Save 20%" />
@@ -171,26 +188,26 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                tools:visibility="visible"
-                                android:visibility="gone"
                                 android:layout_marginStart="8dp"
                                 android:layout_marginEnd="4dp"
                                 android:fontFamily="@font/lato_bold"
                                 android:textColor="@color/s_black"
                                 android:textSize="18sp"
-                                tools:text="4.3" />
+                                android:visibility="gone"
+                                tools:text="4.3"
+                                tools:visibility="visible" />
 
                             <TextView
                                 android:id="@+id/tvReviewCount"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                tools:visibility="visible"
-                                android:visibility="gone"
                                 android:fontFamily="@font/lato"
                                 android:textColor="@color/s_secondary_text"
                                 android:textSize="16sp"
-                                tools:text="(88 Reviews)" />
+                                android:visibility="gone"
+                                tools:text="(88 Reviews)"
+                                tools:visibility="visible" />
 
 
                         </LinearLayout>
@@ -208,13 +225,13 @@
                             android:id="@+id/tvDescription"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            tools:visibility="visible"
-                            android:visibility="gone"
                             android:layout_marginBottom="128dp"
                             android:fontFamily="@font/lato"
                             android:textColor="@color/s_black"
                             android:textSize="16sp"
-                            tools:text="@string/lorem1" />
+                            android:visibility="gone"
+                            tools:text="@string/lorem1"
+                            tools:visibility="visible" />
 
                     </LinearLayout>
 
@@ -285,12 +302,12 @@
 
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardAddToCart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|end"
                     android:layout_marginVertical="16dp"
                     android:layout_marginEnd="24dp"
-                    android:id="@+id/cardAddToCart"
                     app:cardBackgroundColor="@color/s_black"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="4dp"
