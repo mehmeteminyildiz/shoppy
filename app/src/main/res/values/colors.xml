@@ -6,5 +6,6 @@
     <color name="s_black">#454545</color>
     <color name="s_border">#AFAFAF</color>
     <color name="s_grey_light">#EDEFF4</color>
+    <color name="s_hint">#929292</color>
 
 </resources>
