@@ -7,5 +7,9 @@
     <color name="s_border">#AFAFAF</color>
     <color name="s_grey_light">#EDEFF4</color>
     <color name="s_hint">#929292</color>
+    <color name="s_secondary_text">#929292</color>
+    <color name="s_red">#E53935</color>
+    <color name="s_red2">#FF716E</color>
+    <color name="s_green">#4CAF50</color>
 
 </resources>

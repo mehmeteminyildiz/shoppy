@@ -51,7 +51,11 @@ class HomeFragment : Fragment() {
             id = 1231,
             title = "Erkek ayakkabı Nike",
             price = 844,
-            images = arrayListOf("https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg")
+            images = arrayListOf(
+                "https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg",
+                "https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg"
+            ),
+            thumbnail = "https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg"
         )
         val productList =
             arrayListOf(product, product, product, product, product, product, product, product)
@@ -79,7 +83,11 @@ class HomeFragment : Fragment() {
             id = 1231,
             title = "Erkek ayakkabı Nike",
             price = 844,
-            images = arrayListOf("https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg")
+            images = arrayListOf(
+                "https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg",
+                "https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg"
+            ),
+            thumbnail = "https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg"
         )
         val productList =
             arrayListOf(product, product, product, product, product, product, product, product)
@@ -106,7 +114,11 @@ class HomeFragment : Fragment() {
             id = 1231,
             title = "Erkek ayakkabı Nike",
             price = 844,
-            images = arrayListOf("https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg")
+            images = arrayListOf(
+                "https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg",
+                "https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg"
+            ),
+            thumbnail = "https://m.media-amazon.com/images/I/71TawoxTk6L._UY500_.jpg"
         )
         val productList =
             arrayListOf(product, product, product, product, product, product, product, product)
@@ -168,8 +180,24 @@ class HomeFragment : Fragment() {
                 categoryAdapter.setOnClickListenerCustom { categoryName ->
                     gotoProductsByCategoryName(categoryName = categoryName)
                 }
+
+                smartPhonesProductAdapter.setOnClickListenerCustom {
+                    gotoProductDetail(productId = it)
+                }
+                laptopsProductAdapter.setOnClickListenerCustom {
+                    gotoProductDetail(productId = it)
+                }
+                skincareProductAdapter.setOnClickListenerCustom {
+                    gotoProductDetail(productId = it)
+                }
             }
         }
+    }
+
+    private fun gotoProductDetail(productId: Int) {
+        val bundle = Bundle()
+        bundle.putInt("productId", productId)
+        findNavController().navigate(R.id.action_homeFragment_to_productDetailFragment, bundle)
     }
 
     private fun gotoProductsByCategoryName(categoryName: String) {

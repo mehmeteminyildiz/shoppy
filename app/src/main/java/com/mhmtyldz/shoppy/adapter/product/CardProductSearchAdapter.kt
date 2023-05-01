@@ -6,12 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mhmtyldz.shoppy.databinding.CardProductBinding
+import com.mhmtyldz.shoppy.databinding.CardProductSearchBinding
 import com.mhmtyldz.shoppy.model.products.Product
 
 /**
 created by Mehmet E. Yıldız
  **/
-class CardProductAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class CardProductSearchAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
     private var _list = ArrayList<Product>()
@@ -26,24 +27,24 @@ class CardProductAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         notifyDataSetChanged()
     }
 
-    class CardProductViewHolder(val binding: CardProductBinding) :
+    class CardProductSearchViewHolder(val binding: CardProductSearchBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         context = parent.context
-        return CardProductViewHolder(
-            CardProductBinding.inflate(LayoutInflater.from(context), parent, false)
+        return CardProductSearchViewHolder(
+            CardProductSearchBinding.inflate(LayoutInflater.from(context), parent, false)
         )
     }
 
     override fun getItemCount(): Int = list.size
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        bindCardProductViewHolder(holder as CardProductViewHolder, position)
+        bindCardProductSearchViewHolder(holder as CardProductSearchViewHolder, position)
     }
 
-    private fun bindCardProductViewHolder(
-        holder: CardProductViewHolder,
+    private fun bindCardProductSearchViewHolder(
+        holder: CardProductSearchViewHolder,
         position: Int
     ) {
         holder.binding.apply {
