@@ -72,10 +72,25 @@
         <action
             android:id="@+id/action_cartFragment_to_productDetailFragment"
             app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_paymentSuccessFragment"
+            app:destination="@id/paymentSuccessFragment" />
     </fragment>
     <fragment
         android:id="@+id/productDetailFragment"
         android:name="com.mhmtyldz.shoppy.view.productDetail.ProductDetailFragment"
         android:label="fragment_product_detail"
         tools:layout="@layout/fragment_product_detail" />
+    <fragment
+        android:id="@+id/paymentSuccessFragment"
+        android:name="com.mhmtyldz.shoppy.view.cart.PaymentSuccessFragment"
+        android:label="fragment_payment_success"
+        tools:layout="@layout/fragment_payment_success" >
+        <action
+            android:id="@+id/action_paymentSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
